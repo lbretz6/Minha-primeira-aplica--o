@@ -1,0 +1,108 @@
+WindowManager:
+    LoginWindow:
+    CreateAccountWindow:
+    MainWindow:
+
+<LoginWindow>:
+    email: email
+    password: password
+
+    GridLayout:
+        cols: 1
+        padding: 10
+        spacing: 10
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "Email:"
+            TextInput:
+                id: email
+                multiline: False
+
+            Label:
+                text: "Password:"
+            TextInput:
+                id: password
+                multiline: False
+                password: True
+
+        Button:
+            text: "Login"
+            on_release:
+                root.loginBtn()
+
+        Button:
+            text: "Create Account"
+            on_release:
+                root.createBtn()
+
+<CreateAccountWindow>:
+    namee: namee
+    email: email
+    password: password
+
+    GridLayout:
+        cols: 1
+        padding: 10
+        spacing: 10
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "Name:"
+            TextInput:
+                id: namee
+                multiline: False
+
+            Label:
+                text: "Email:"
+            TextInput:
+                id: email
+                multiline: False
+
+            Label:
+                text: "Password:"
+            TextInput:
+                id: password
+                multiline: False
+                password: True
+
+        Button:
+            text: "Submit"
+            on_release:
+                root.submit()
+
+        Button:
+            text: "Back to Login"
+            on_release:
+                root.login()
+
+<MainWindow>:
+    n: n
+    email: email
+    created: created
+
+    GridLayout:
+        cols: 1
+        padding: 10
+        spacing: 10
+
+        Label:
+            id: n
+            text: "Account Name:"
+
+        Label:
+            id: email
+            text: "Email:"
+
+        Label:
+            id: created
+            text: "Created On:"
+
+        Button:
+            text: "Log Out"
+            on_release:
+                root.logOut()
